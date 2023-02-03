@@ -1,0 +1,112 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=GBK" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>Research</title>
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">Home</div>
+<div class="menu-item"><a href="index.html">Home</a></div>
+<div class="menu-item"><a href="Bio.html">Biography</a></div>
+<div class="menu-item"><a href="research.html">Research</a></div>
+<div class="menu-category">Miscellaneous</div>
+<div class="menu-item"><a href="Miscellaneous.html">Misc.</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>Research</h1>
+</div>
+
+<div class="infoblock">
+	<!--
+<div class="blocktitle">Summary</div>
+<div class="blockcontent">
+<p>The focal point of my MPhil research is sample-efficient RL with (general) function approximation. I am particularly interested in the structural and/or dataset conditions that permit efficient online learning or offline learning. Two frameworks can be used to categorize my projects: (1) the generalized eluder coefficient (GEC) with initial optimism/pessimism; and (2) the generalized eluder dimension (GED) with pointwise uncertainty estimation. These two frameworks are complementary to each other in terms of universality, computational efficiency, and statistical optimality.</p>
+</div></div>
+<h2>Papers and Preprints</h2>
+<div class="infoblock">
+<div class="blocktitle">Generalized Eluder Coefficient</div>
+<div class="blockcontent">
+<p>The high-level intuition of GEC is to capture the hardness of exploration by comparing the <b>out-of-sample prediction error</b> with the <b>in-sample training error</b> evaluated on the historical data collected so far. The interesting point is that we can reduce the various complicated RL problems to an online error estimation over a hypothesis space, which is easier to handle.</p>
+<p>The main advantage of GEC is its universality since it unifies nearly all known tractable RL problems but the regret bound is usually suboptimal in terms of horizon dependency and the algorithms with initial optimism are usually computationally inefficient.</p>
+</div></div>
+<ul>
+<li><p><a href="https://arxiv.org/abs/2211.01962" target=&ldquo;blank&rdquo;>A Posterior Sampling Framework for Interactive Decision Making</a> <a href="slideonlinegfa.pdf" onclick="javascript:urchinTracker('/downloads/slidegfarl.pdf');">[Slide] </a><br />
+Han Zhong*, Wei Xiong*, Sirui Zheng, Liwei Wang, Zhaoran Wang, Zhuoran Yang and Tong Zhang,<br /> 
+Preprint.<br /> </p>
+</li>
+<li><p><a href="https://proceedings.mlr.press/v162/xiong22b/xiong22b.pdf" target=&ldquo;blank&rdquo;>A Self-Play Posterior Sampling Algorithm for Zero-Sum Markov Game</a> <br />
+Wei Xiong, Han Zhong, Chengshuai Shi, Cong Shen, and Tong Zhang,<br /> 
+<i>ICML</i> 2022 and <i>ICLR 2022 Workshop on Gamification and Multiagent Solutions</i>.<br /> </p>
+</li>
+</ul>
+<div class="infoblock">
+<div class="blocktitle">Generalized Eluder Dimension with Weighted Least-Squares Regression</div>
+<div class="blockcontent">
+<p>The GED estimates the uncertainty at <b>every state-action pair</b> by comparing the <b>out-of-sample prediction error</b> with the <b>in-sample training error</b> evaluated on the historical data collected so far, which is much stronger than the GEC that measures the ratio only on average. This type of complexity measure is usually used to analyze least-squares value iteration (LSVI), where we add/subtract a bonus function to incorporate the uncertainty for every state-action pair. For online learning, we typically require certain low-rank assumptions so that the sum of the bonus is small. For offline learning, we typically require certain dataset coverage assumptions so that the bonus is small under the expectation of the optimal policy.</p>
+<p>The main advantage of GED is that we can assign sample-dependent weights (variance/uncertainty) in the regression subroutine to achieve a sharper regret bound or to design a corruption-robust estimator. Moreover, the LSVI framework has some advantages in terms of computational efficiency. However, the problems that are captured by GED are rather limited.</p>
+</div></div>
+<ul>
+<li><p><a href="https://arxiv.org/abs/2212.05949" target=&ldquo;blank&rdquo;>Corruption-Robust Algorithms with Uncertainty Weighting for Nonlinear Contextual Bandits and Markov Decision Processes</a> <br />
+Chenlu Ye, Wei Xiong, Quanquan Gu and Tong Zhang,<br /> 
+Preprint.<br /> </p>
+</li>
+<li><p><a href="https://arxiv.org/abs/2205.15512" target=&ldquo;blank&rdquo;>Nearly Minimax Optimal Offline Reinforcement Learning with Linear Function Approximation: Single-Agent MDP and Markov Game</a> <a href="slideoffline.pdf" onclick="javascript:urchinTracker('/downloads/slidegfarl.pdf');">[Slide] </a><br />
+Wei Xiong*, Han Zhong*, Chengshuai Shi, Cong Shen, Liwei Wang, and Tong Zhang,<br /> 
+<i>ICLR</i> 2023. <br /> </p>
+</li>
+<li><p><a href="https://arxiv.org/abs/2202.07511" target=&ldquo;blank&rdquo;>Pessimistic Minimax Value Iteration: Provably Efficient Equilibrium Learning from Offline Datasets</a> <br />
+Han Zhong*, Wei Xiong*, Jiyuan Tan*, Liwei Wang, Tong Zhang, Zhaoran Wang, and Zhuoran Yang,<br /> 
+<i>ICML</i> 2022 and <i>ICLR 2022 Workshop on Gamification and Multiagent Solutions</i>.<br /></p>
+</li>
+</ul>
+<div class="infoblock">
+<div class="blocktitle">Miscellaneous Projects</div>
+<div class="blockcontent">
+<p>I also spent time on the high-probability generalization bound of uniformly stable algorithms, decentralized composite optimization, and decentralized/federate multi-armed bandit.</p>
+</div></div>
+<ul>
+<li><p><a href="note_stability.pdf" onclick="javascript:urchinTracker('/downloads/cv.pdf');">An Alternative Analysis of High-Probability Generalization Bound for Uniformly Stable Algorithms</a><br />
+Wei Xiong, Yong Lin, and Tong Zhang <br />
+Project Report, Not intended for publication.</p>
+</li>
+</ul>
+<ul>
+<li><p><a href="https://arxiv.org/abs/2012.15010" target=&ldquo;blank&rdquo;>PMGT-VR: A decentralized proximal-gradient algorithmic framework with variance reduction</a>  [<a href="https://github.com/WeiXiongUST/Decentralized-Proximal-Algorithm-with-Variance-Reduction" target=&ldquo;blank&rdquo;>Code</a>]  <a href="slideopt.pdf" onclick="javascript:urchinTracker('/downloads/slide<u>gfa</u>rl.pdf');">[Slide] </a><br /> 
+Haishan Ye*, Wei Xiong*, and Tong Zhang, <br />
+Revision at <i>TPAMI</i>. <br /> </p>
+</li>
+</ul>
+<ul>
+<li><p><a href="https://arxiv.org/abs/2110.14622" target=&ldquo;blank&rdquo;>Heterogeneous Multi-player Multi-armed Bandits: Closing the Gap and Generalization</a>  [<a href="https://github.com/ShenGroup/MPMAB_BEACON" target=&ldquo;blank&rdquo;>Code</a>] <br /> 
+Chengshuai Shi, Wei Xiong, Cong Shen, and Jing Yang, <br />
+<i>Neurips</i>, 2021.<br /> </p>
+</li>
+<li><p><a href="https://arxiv.org/abs/2110.14628" target=&ldquo;blank&rdquo;>(Almost) Free Incentivized Exploration from Decentralized Learning Agents</a>  [<a href="https://github.com/ShenGroup/Observe_then_Incentivize" target=&ldquo;blank&rdquo;>Code</a>] <br /> 
+Chengshuai Shi, Haifeng Xu, Wei Xiong, and Cong Shen, <br />
+<i>Neurips</i>, 2021.<br /> </p>
+</li>
+<li><p><a href="https://arxiv.org/abs/2110.13578" target=&ldquo;blank&rdquo;>Distributional Reinforcement Learning for Multi-Dimensional Reward Functions</a>  <br /> 
+Pushi  Zhang,  Xiaoyu  Chen,  Li  Zhao,  Wei  Xiong,  Tao  Qin,  and  Tie-Yan  Liu, <br />
+<i>Neurips</i>, 2021.<br /> </p>
+</li>
+<li><p><a href="https://arxiv.org/abs/2003.00162" target=&ldquo;blank&rdquo;>Decentralized multi-player multi-armed bandits with no collision information</a>  [<a href="https://github.com/WeiXiongUST/multi_player_multi_armed_bandit_algorithms" target=&ldquo;blank&rdquo;>Code*</a>] <br /> 
+Chengshuai Shi, Wei Xiong, Cong Shen, and Jing Yang, <br />
+<i>AISTATS</i>, 2020.<br /> </p>
+</li>
+</ul>
+<p>(* equal contribution or alphabetical order)</p>
+<p>The Code* implementes many SOTA and baseline MPMAB algorithms, which is a nice work of Cindy Trinh.</p>
+</td>
+</tr>
+</table>
+-->
+</body>
+</html>
